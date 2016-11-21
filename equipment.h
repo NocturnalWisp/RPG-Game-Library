@@ -43,13 +43,13 @@ class weapon : public item{
 
 weapon emptyWeapon;
 
-class armor : public item{
+class armour : public item{
 	private:
 		int acIncrease;
 		int durability;
 		string place;
 	public:
-		armor(string n = "", string d = "", int v = 0, int aci = 0, int du = 0, string p = ""){
+		armour(string n = "", string d = "", int v = 0, int aci = 0, int du = 0, string p = ""){
 			name = n;
 			des = d;
 			value = v;
@@ -82,6 +82,6 @@ class armor : public item{
 		}
 };
 
-armor emptyArmor;
+armour emptyArmour;
 
 #endif
