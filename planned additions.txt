@@ -1,0 +1,27 @@
+classifications(classes)-eg. rogue, warroir, mage anything the game maker wants to make really
+attributes-like strength and dexterity also whatever the game maker wants
+stamina, magicka, leveling
+status affects
+dieties(gods)
+places-area and under area rooms and caves and such
+apparel
+magical artifacts like scrolls and other objects
+books
+keys?
+enchanting items
+creating food and potions and basically anything
+forging
+misc objects
+magic:
+	creation of colleges(types)
+	spell casting
+	imbuing spells into items(enchanting)
+thrown objects
+ranged weapons
+conversation for npc's
+quests
+creatures like animals and monsters maybe seperated
+artifacts 
+powers or abilities
+
+

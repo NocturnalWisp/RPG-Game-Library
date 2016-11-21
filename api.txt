@@ -1,0 +1,79 @@
+item:
+	variables:
+		name-the name of the item
+		des(description)-a small description of the object
+		value-the value in integral form of the worth of the object
+	functions:
+		*these functions are available to all the child classes
+		getName()-get the name of this object as a string
+		getDes()-get the object's description as a string
+		getValue()-get the value of the object as an integer
+			
+		set''(var)-sets the object's ''(name, description, value)
+		
+		a() function to make the class abstract
+
+weapon(derivided from item(gets all items variables and functions)):
+	constructor(name, description, value, damageIncrease, durability, oneHanded)
+	*all fields are optional incase an array is wanted to be made but they are expected if use is wanted
+	variables:
+		dmgIncrease-this is the amount of damage increase the players damage recieves
+		durability-this is the use of the weapon
+		oneHanded-this is true or false to indicate whether the weapon is one handed or not
+	functions:
+		get and set for all objects variables
+		a() to keep virtual agreements with base class(don't worry about it)
+
+Armor(derived for item):
+	constructor(name, description, value, acIncrease, durability, place)
+	*all fields are optional
+	variables:
+		acIncrease-the additional amount given to a characters ac
+		durability-howlong it lasts (int)
+		place-the place on the body it goes
+	functions:
+		get and set all variables
+		a() for virtual
+		
+consumable(derived from item(gets all items variables and functions)):
+	constructor(name, description, value, change)
+	*all optional
+	variables:
+		change-used to indicate the amount of change wanted to be done to a character(eg. adding 5 to health)
+	functions:
+		get and set change
+		use(&target, type)-this takes in a target presented as an address and a type(eg.potion.use(player, "health");) the type option is any of the character variables
+		
+		
+	
+character:
+	variables:
+		name-the name of the character
+		des-the description of the character
+		maxHealth-the maximum health the character can attain
+		health-the current health
+		toHit-the target number that must be acheived for the character to succesfuly hit the opponent
+		dmg(damage)-the amount of damage the character does on a hit
+		ac(armor class)-the damage to a this character is subtracted from this
+	functions:
+		get and set for all the variables listed above
+		attack(&object)-this takes in the address of an object to attack a target(eg. joe.attack(&bob);)
+		recieveDamage(amount)-takes an amount and the character recieves damage equal to the amount given as an int
+		gainHealth(amount)-character gains health equal to the amount given
+		a() function to make the class abstract
+		
+player(to make a player)-derived from character:
+	constructor(name, description, maxHealth, health, toHit, dmg(damage), ac(armor class))
+	*all are optional arguments accept name
+	variables:
+		weapons-the weapons the player can hold
+		mainHand-holds a weapon object
+		offHand-holds a weapon object if weapon in main hand is one handed and the object in this hand is also.
+	functions:
+		get and set mainHand() and offHand()
+		get{Weapons, ...}(weapon[])- returns an array in the given address of an array
+		printInventory()-prints the inventory of the character to the console
+		addInventory(item)-adds an item to the inventory
+		removeInventory(item)-if the item is in the character's inventory it is removed
+		attack(object)-recieves the addres of the object and that object is attacked
+		a()-to fullfill the virtual needs of the base class(don't worry about it)
